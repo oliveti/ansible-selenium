@@ -195,7 +195,7 @@ def start(module):
         java_args = ''
         if module.params['args']:
             for (k, v) in module.params['args'].iteritems():
-                args += '-%s=%s ' % (k, v)
+                args += '-%s %s ' % (k, v)
 
         if module.params['javaargs']:
             for arg in module.params['javaargs']:
